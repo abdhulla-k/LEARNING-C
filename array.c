@@ -37,4 +37,34 @@ int main() {
         // push to i th position
         arr[i] = scanf("%d",&arr[i]);
     }
+
+    ///////////////////////////
+    //
+    // multi dimensional array
+    // how to declare?
+    int multiArray[3][3]; // it is a 3*3 array
+    
+    // how to add values to this array?
+    //eg. multiArray[0][0] = 1;
+    // get data from user
+
+    printf("\nenter the values\n");
+    for( int i = 0; i < 3; i++ ) {
+        for( int j = 0; j < 3; j++ ) {
+            int temp;
+            scanf("%d",&multiArray[i][j]);
+            printf("You entered %d\n",multiArray[i][j]);
+        }
+    }
+
+    // print array values
+
+    printf(" \narray values are:\n");
+    for( int i = 0; i < 3; i++ ) {
+        for( int j = 0; j < 3; j++ ) {
+            int temp;
+            printf("%d\t",multiArray[i][j]);
+        }
+        printf("\n");
+    }
 }
