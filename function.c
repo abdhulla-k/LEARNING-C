@@ -4,6 +4,7 @@
 void sum();
 int multiplication();
 void helloWorld();
+char* GetUserName();
 
 int main() {
     int num1 = 2;
@@ -22,7 +23,7 @@ int main() {
     // call get userName
     /* const char* name = GetUserName();
     printf("user name: %s",name); */
-    printf("%s",GetUserName());
+    printf("\nuser name is: %s",GetUserName());
 
 }
 
@@ -41,4 +42,19 @@ int multiplication( int num1, int num2 ) {
 // helloworld function
 void helloWorld() {
     printf("Hello world\n");
+}
+
+// getUserName function
+// this function shows how to return a string?
+
+// user * after keywerd char to return a string
+char* GetUserName() {
+    char *name;
+    char name1[20];
+
+    printf("Enter username: ");
+    // input username
+    scanf("%s", name1);
+    name = name1;
+    return name;
 }
