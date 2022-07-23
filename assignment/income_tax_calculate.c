@@ -1,3 +1,5 @@
+// 19
+
 #include <stdio.h>
 int main() {
     int annualIncome;
