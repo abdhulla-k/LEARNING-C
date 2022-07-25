@@ -25,11 +25,15 @@ int main() {
         if( arr[i] == element ) {
             deleted++;
 
-            // delete the element
-            for( j = i; j < n-1; j++ ) {
-                arr[j] = arr[j+1];
+            if( i == n-1 ) {
+                arr[i] = 0;
+            } else {
+                // delete the element
+                for( j = i; j < n-1; j++ ) {
+                    arr[j] = arr[j+1];
+                }
+                i = i-1;
             }
-            i = i-1;
         }
     }
 
