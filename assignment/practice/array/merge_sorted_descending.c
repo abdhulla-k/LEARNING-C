@@ -26,27 +26,36 @@ int main() {
     }
 
     // merge the array
+    // iterate merged length times
     for( i = 0; i < len1 + len1; i++ ) {
+
+        // got through first array
         for( j = 0; j < len1; j++ ) {
-            if( position2 != len2 - 1 ) {
+            if( position2 != len2 ) {
+
+                // check is it lager the arr2[k] than arr[i]
                 for( k = position2; k < len2; k++ ) {
-                if( arr1[j] < arr2[k] ) {
-                    arr3[i] = arr2[k];
-                    i++;
-                    position2 = k+1;
-                } else if( arr1[j] == arr2[k] ) {
-                    arr3[i] = arr1[j];
-                    i++;
-                    arr3[i] = arr2[k];
-                    i++;
-                    position2 = k+1;
-                    break;
-                } else if( arr1[j] > arr2[k] ) {
-                    arr3[i] = arr1[j];
-                    i++;
-                    break;
+                    if( arr1[j] < arr2[k] ) {
+                        arr3[i] = arr2[k];
+                        i++;
+                        position2 = k+1;  // save the position we iterated through arr2;
+
+                        // add both two element to arr3 if both elements are same
+                    } else if( arr1[j] == arr2[k] ) {
+                        arr3[i] = arr1[j];
+                        i++;
+                        arr3[i] = arr2[k];
+                        i++;
+                        position2 = k+1;
+                        break;
+
+                        // save arr1[j] if that greater than arr2[j]
+                    } else if( arr1[j] > arr2[k] ) {
+                        arr3[i] = arr1[j];
+                        i++;
+                        break;
+                    }
                 }
-            }
             }
         }
     }
