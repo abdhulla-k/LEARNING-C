@@ -1,7 +1,7 @@
 // Write a program to find Second Largest Number in an Array
 #include <stdio.h>
 int main() {
-    int i, j, n, largest = 0;
+    int i, j, n, largest;
     int arr[100];
     int len;
     int secondLargest = 0;
@@ -14,6 +14,8 @@ int main() {
     for( i = 0; i < n; i ++ ) {
         printf( "Enter %d th item: ", i );
         scanf( "%d", &arr[i] );
+        secondLargest = arr[i] < secondLargest ? arr[i] : secondLargest;
+        largest = i == 0 ? arr[i] : largest;
 
         // save larges
         largest = largest < arr[i] ? arr[i] : largest;
