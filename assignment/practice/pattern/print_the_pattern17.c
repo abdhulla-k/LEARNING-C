@@ -1,14 +1,14 @@
 /*
 
-* * * * * * * * * *
-* * * *     * * * *
-* * *         * * *
-* *             * *
-*                 *
-* *             * *
-* * *         * * *
-* * * *     * * * *
-* * * * * * * * * *
+        *
+      * * *
+    *   *   *
+  *     *     *
+* * * * * * * * *
+  *     *     *
+    *   *   *
+      * * *
+        *
 
 */
 
@@ -23,8 +23,8 @@ int main() {
 
     // print the first section 
     for( i = 0; i < n; i++ ) {
-        for( j = 0; j < n * 2; j++ ) {
-            if( j < n-i || n + i <= j ) {
+        for( j = 1; j <= n + i; j++ ) {
+            if( j == n-i || j == n + i || j == n || i == n-1 ) {
                 printf( "* " );
             } else {
                 printf( "  " );
@@ -34,9 +34,9 @@ int main() {
     }
 
     // print the second section
-    for( i = n; i > 0; i-- ) {
-        for( j = 0; j < n * 2; j++ ) {
-            if( j <= n-i || j >= ( n * 2 ) - (n-i+1) ) {
+    for( i = n-2; i >= 0; i-- ) {
+        for( j = 1; j <= n+i; j++ ) {
+            if( j == n || j == n-i || j == n+i ) {
                 printf( "* " );
             } else {
                 printf( "  " );
